@@ -27,22 +27,22 @@ export default function Profile() {
     gender: "Nam",
     birthDate: "12/08/2005",
 
-    email: "your-email@gmail.com",
-    github: "https://github.com/your-github",
+    email: "nguyenduyhung101010@gmail.com",
+    github: "https://github.com/ndhung1208/iotcn369",
 
     // Thay bằng link Postman của bạn
-    postman: "https://documenter.getpostman.com/view/your-postman-link",
+    postman: "https://hungiot.getpostman.com/view/your-postman-link",
 
     // Thay bằng link PDF của bạn
-    pdf: "https://your-pdf-link.com/document.pdf",
+    pdf: "https://hungnd.com/document.pdf",
 
-    avatar: 'avt',
+    avatar: avt,
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", overflow: "hidden" }}>
       {/* Header */}
-      <Box sx={{ mb: 3 }}>
+      <Box sx={{ mb: 2, flexShrink: 0 }}>
         <Typography variant="h5" fontWeight={800}>
           Thông tin cá nhân
         </Typography>
@@ -58,7 +58,9 @@ export default function Profile() {
           width: "100%",
           borderRadius: 4,
           boxShadow: "0 8px 30px rgba(15,23,42,.07)",
-          overflow: "hidden",
+          overflow: "auto",
+          flex: 1,
+          minHeight: 0,
         }}
       >
         <CardContent

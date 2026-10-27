@@ -229,12 +229,12 @@ export default function DeviceSetting() {
     selectedDevice.currentState === "ON";
 
   return (
-    <Box>
+    <Box sx={{ height: "100%", display: "flex", flexDirection: "column", overflow: "hidden" }}>
       {/* ======================================================
           HEADER
          ====================================================== */}
 
-      <Box sx={{ mb: 3 }}>
+      <Box sx={{ mb: 2, flexShrink: 0 }}>
         <Typography
           variant="h5"
           fontWeight={800}
@@ -253,6 +253,7 @@ export default function DeviceSetting() {
         container
         spacing={3}
         alignItems="stretch"
+        sx={{ flex: 1, overflow: "auto", minHeight: 0, alignContent: "flex-start" }}
       >
         {/* ====================================================
             DEVICE LIST

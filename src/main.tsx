@@ -9,12 +9,55 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: { main: "#2563eb" },
-    background: { default: "#f5f7fb", paper: "#ffffff" },
+    background: { default: "#f8fafc", paper: "#ffffff" },
+    text: {
+      primary: "#1e293b",
+      secondary: "#64748b",
+    },
+    divider: "#e2e8f0",
   },
   typography: {
-    fontFamily: "Inter, Roboto, Arial, sans-serif",
+    fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    h5: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h6: {
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
+    },
+    body1: {
+      fontSize: "0.875rem",
+    },
+    body2: {
+      fontSize: "0.8125rem",
+    },
+    button: {
+      textTransform: "none",
+      fontWeight: 600,
+    },
   },
-  shape: { borderRadius: 14 },
+  shape: { borderRadius: 10 },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "none",
+          },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
+        },
+      },
+    },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
